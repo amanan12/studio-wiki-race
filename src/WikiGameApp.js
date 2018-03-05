@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GameView from './GameView.js'
 
 export default class WikiGameApp extends Component {
   render() {
@@ -6,6 +7,7 @@ export default class WikiGameApp extends Component {
     var isComplete = this.props.isComplete;
     var titles = this.props.titles;
     var targetTitle = this.props.targetTitle;
+    var currentTitle = this.props.currentTitle;
 
     // Properties (functions) provided by WikiGameHistory.
     var addTitle = this.props.addTitle;
@@ -13,7 +15,7 @@ export default class WikiGameApp extends Component {
 
     return (
       <div>
-        TODO: Add links to new components here.
+        <GameView title={currentTitle} />
       </div>
     );
   }
